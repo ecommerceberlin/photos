@@ -35,8 +35,10 @@ async function handler(req, res) {
   
   }else{
 
-    const url = await cloudinary.utils.download_folder(`${folder}/${id}`, {
-      target_public_id: `${folder}_${id}`,
+    const target_folder = `${folder}_photos`
+
+    const url = await cloudinary.utils.download_folder(`${target_folder}/${id}`, {
+      target_public_id: `${target_folder}_${id}`,
       flatten_folders: true
     });
   

@@ -6,7 +6,7 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/:folder/:id',
+        source: '/:id/:folder',
         destination: '/api/?folder=:folder&id=:id',
       },
     ]
